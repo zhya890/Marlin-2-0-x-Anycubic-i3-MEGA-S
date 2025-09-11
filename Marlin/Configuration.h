@@ -1408,7 +1408,7 @@
   #if ENABLED(KNUTWURST_BMG)
     #define DEFAULT_MAX_FEEDRATE        { 500, 500, 6, 40 }
   #else
-    #define DEFAULT_MAX_FEEDRATE        { 500, 500, 6, 80 }
+    #define DEFAULT_MAX_FEEDRATE        { 250, 250, 8, 30 }
   #endif
 #endif
 
@@ -1453,7 +1453,7 @@
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
 #if ANY(KNUTWURST_MEGA, KNUTWURST_MEGA_S, KNUTWURST_MEGA_P)
-  #define DEFAULT_MAX_ACCELERATION      { 3000, 2000,  60, 10000 }
+  #define DEFAULT_MAX_ACCELERATION      { 2000, 2000,  60, 10000 }
 #endif
 
 #if ENABLED(KNUTWURST_MEGA_X)
@@ -1496,9 +1496,9 @@
 #endif
 
 #if ENABLED(KNUTWURST_MEGA_S)
-  #define DEFAULT_ACCELERATION          1500    // X, Y, Z and E acceleration for printing moves
-  #define DEFAULT_RETRACT_ACCELERATION  1500    // E acceleration for retracts
-  #define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
+  #define DEFAULT_ACCELERATION          1000    // X, Y, Z and E acceleration for printing moves
+  #define DEFAULT_RETRACT_ACCELERATION  1250    // E acceleration for retracts
+  #define DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves
 #endif
 
 #if ENABLED(KNUTWURST_MEGA_X)
@@ -1536,8 +1536,8 @@
 #define CLASSIC_JERK
 #if ENABLED(CLASSIC_JERK)
   #if ANY(KNUTWURST_MEGA, KNUTWURST_MEGA_S, KNUTWURST_MEGA_P)
-    #define DEFAULT_XJERK  8.0
-    #define DEFAULT_YJERK  8.0
+    #define DEFAULT_XJERK 10.0
+    #define DEFAULT_YJERK 10.0
     #define DEFAULT_ZJERK  0.4
   #elif ENABLED(KNUTWURST_MEGA_X)
     #define DEFAULT_XJERK  4.0
@@ -1568,7 +1568,7 @@
   #endif
 #endif
 
-#define DEFAULT_EJERK    10.0  // May be used by Linear Advance
+#define DEFAULT_EJERK     5.0  // May be used by Linear Advance
 
 /**
  * Junction Deviation Factor
