@@ -1568,7 +1568,7 @@
   #endif
 #endif
 
-#define DEFAULT_EJERK     5.0  // May be used by Linear Advance
+#define DEFAULT_EJERK    10.0  // May be used by Linear Advance
 
 /**
  * Junction Deviation Factor
@@ -1635,7 +1635,7 @@
  * Override this pin only if the probe cannot be connected to
  * the default Z_MIN_PROBE_PIN for the selected MOTHERBOARD.
  *
- *  - The simplest option is to use a free endstop connector.
+ *  - The simplest option is to use a free endstop connector..
  *  - Use 5V for powered (usually inductive) sensors.
  *
  *  - For simple switches...
